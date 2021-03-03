@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import "../components/var.scss";
+
+@media screen and (max-width: 320px) {
+  body {
+    font-family: $page-font-family;
+    margin: 0px;
+  }
+  .header-div {
+    max-width: 320px;
+    min-height: 230px;
+    //background-color: rgba(0, 0, 0, 0.56);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../../images/mobile/Rectangle-1.jpg);
+
+    background-size: 320px 230px;
+  }
+  h1 {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+  }
+  .menu-image {
+    margin-top: 46px;
+    margin-left: 21px;
+    margin-right: 112px;
+    width: 24px;
+    height: 24px;
+  }
+  .menu__list {
+    display: flex;
+    box-sizing: content-box;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 58px;
+  }
+  .menu__item {
+    display: block;
+    box-sizing: content-box;
+  }
+  .menu__item:not(:last-child) {
+    margin-right: 39px;
+  }
+
+  .menu__item-link {
+    display: block;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $white-color;
+  }
+
+  .menu__item-div::after {
+    content: "";
+    display: block;
+    box-sizing: content-box;
+    //position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: $orange-color;
+  }
+  .search {
+    position: relative;
+    margin-top: 38px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .search__input {
+    min-width: 280px;
+    padding: 0px;
+    background-color: transparent;
+    height: 20px;
+    border-bottom: 1px solid $white-color;
+  }
+  .search__label {
+    position: absolute;
+    left: 0px;
+    bottom: 4px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: $white-color;
+  }
+}

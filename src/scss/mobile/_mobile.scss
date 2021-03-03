@@ -1,14 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import "../components/_var.scss";
+
 @media screen and (max-width: 320px) {
   body {
-    font-family: Roboto;
+    font-family: $page-font-family;
     margin: 0px;
   }
   .header-div {
     max-width: 320px;
     min-height: 230px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url(../../images/mobile/Rectangle-1.jpg);
+    //background-color: rgba(0, 0, 0, 0.56);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url("images/mobile/header-img-mobile.jpg");
     background-size: 320px 230px;
   }
   h1 {
@@ -43,27 +46,33 @@
   .menu__item:not(:last-child) {
     margin-right: 39px;
   }
+
   .menu__item-link {
     display: block;
+
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 14px;
     /* identical to box height */
+
     display: flex;
     align-items: center;
     text-align: center;
     text-transform: uppercase;
-    color: #ffffff;
+
+    color: $white-color;
   }
+
   .menu__item-div::after {
     content: "";
     display: block;
     box-sizing: content-box;
+    //position: absolute;
     width: 100%;
     height: 3px;
-    background-color: #ff6b08;
+    background-color: $orange-color;
   }
   .search {
     position: relative;
@@ -76,7 +85,7 @@
     padding: 0px;
     background-color: transparent;
     height: 20px;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid $white-color;
   }
   .search__label {
     position: absolute;
@@ -86,10 +95,6 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
-    color: #ffffff;
-  }
-  .search__label:focus:hover {
-    opacity: 50%;
+    color: $white-color;
   }
 }
-/*# sourceMappingURL=mobile.css.map */
